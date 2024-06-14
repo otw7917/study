@@ -227,3 +227,6 @@ USING(CAR_ID)
 ORDER BY MONTHLY_CAR_RECORD.MONTH, MONTHLY_CAR_RECORD.CAR_ID DESC
 
 ```
+
+**limit** 상위 몇개만 출력하고 싶을때
+**ROUND(value, 자릿수)**, **IFNULL(column, replace)** ≈ **COALESCE()**
