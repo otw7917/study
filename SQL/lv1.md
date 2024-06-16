@@ -61,3 +61,18 @@ SELECT COUNT(ID) AS FISH_COUNT
 FROM FISH_INFO
 WHERE YEAR(TIME) = 2021
 ```
+
+**where 절 먼저 파싱 -> IFNULL 치환후 SELECT**
+
+```sql
+-- 잔챙이 잡은 수 구하기
+-- https://school.programmers.co.kr/learn/courses/30/lessons/293258
+
+-- SELECT COUNT(ID) AS FISH_COUNT
+-- FROM FISH_INFO
+-- WHERE LENGTH < 10 OR LENGTH IS NULL
+
+SELECT COUNT(ID) AS FISH_COUNT
+FROM FISH_INFO
+WHERE IFNULL(LENGTH, 1) < 10
+```
